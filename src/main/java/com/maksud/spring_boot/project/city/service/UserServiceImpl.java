@@ -23,4 +23,20 @@ public class UserServiceImpl implements UserService{
     public Citizen createUser(Citizen citysen) {
         return userRepository.save(citysen);
     }
+
+
+    @Override
+    public boolean deleteCitizen(Citizen citizen) {
+        if (citizen.getId() != 1){
+            userRepository.delete(citizen);
+            return true;
+        }else {
+            return false;
+        }
+    }
+
+    @Override
+    public Citizen getCitizenById(Long id) {
+       return userRepository.findById(id).get();
+    }
 }

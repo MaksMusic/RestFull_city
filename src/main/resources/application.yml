@@ -6,4 +6,7 @@ spring:
 
   jpa:
     hibernate:
-      ddl-auto: create
+      ddl-auto: update
+
+  cassandra:
+    port: 8087
