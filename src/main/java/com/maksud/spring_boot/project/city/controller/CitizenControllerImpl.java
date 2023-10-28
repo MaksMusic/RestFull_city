@@ -20,6 +20,8 @@ public class CitizenControllerImpl implements CitizenController {
         return userService.getAllUser();
     }
 
+
+    //в данном методе была проблема  -> отсутствовала анотация RequestBody
     @Override
     public Citizen createUser(@RequestBody Citizen citysen) {
         return userService.createUser(citysen);
