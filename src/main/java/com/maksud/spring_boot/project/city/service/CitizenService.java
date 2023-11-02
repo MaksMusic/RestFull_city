@@ -1,12 +1,11 @@
 package com.maksud.spring_boot.project.city.service;
 
 import com.maksud.spring_boot.project.city.model.Citizen;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
+import com.maksud.spring_boot.project.city.model.Passport;
 
 import java.util.List;
 
-public interface UserService {
+public interface CitizenService {
 
 
     List<Citizen> getAllUser();
@@ -14,6 +13,6 @@ public interface UserService {
 
     boolean deleteCitizen(Citizen citizen);
     Citizen getCitizenById(Long id);
-
-
+    boolean deleteCitizenById(Long id);
+     Passport getPassword(Long userId);
 }

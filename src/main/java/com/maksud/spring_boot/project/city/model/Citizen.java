@@ -5,6 +5,7 @@ import lombok.*;
 @Entity
 @Getter
 @Setter
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
 
@@ -18,6 +19,10 @@ public class Citizen {
 
    @Column(name = "name")
     private String name;
+
+   @OneToOne (cascade = CascadeType.ALL)
+   @JoinColumn(name = "passport_id",referencedColumnName = "id")
+   private Passport passport;
 
 
 }

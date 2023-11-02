@@ -1,10 +1,12 @@
 package com.maksud.spring_boot.project.city.controller;
 
 import com.maksud.spring_boot.project.city.model.Citizen;
-import com.maksud.spring_boot.project.city.service.UserService;
+import com.maksud.spring_boot.project.city.model.Passport;
+import com.maksud.spring_boot.project.city.service.CitizenService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -12,14 +14,14 @@ import java.util.List;
 @RestController
 @RequiredArgsConstructor
 public class CitizenControllerImpl implements CitizenController {
-    private final UserService userService;
+    private final CitizenService userService;
 
     @Override
     public List<Citizen> getAllUser() {
         return userService.getAllUser();
     }
 
-    //в данном методе была проблема  -> отсутствовала анотация RequestBody
+    //в данном методе была проблема -> отсутствовала анотация RequestBody
     @Override
     public Citizen createUser(@RequestBody Citizen citizen) {
         return userService.createUser(citizen);
@@ -32,7 +34,18 @@ public class CitizenControllerImpl implements CitizenController {
     }
 
     @Override
-    public Citizen getCitizenById(@PathVariable  Long id) {
+    public Citizen getCitizenById(@RequestParam("id") Long id) {
         return userService.getCitizenById(id);
+    }
+
+    @Override
+    public boolean deleteCitizenById(@PathVariable  Long id) {
+        return userService.deleteCitizenById(id);
+    }
+
+
+    @Override
+    public Passport getPassword(@PathVariable Long id) {
+        return userService.getPassword(id);
     }
 }
