@@ -1,4 +1,4 @@
-package com.maksud.spring_boot.project.city.controller;
+package com.maksud.spring_boot.project.city.controller.passportServise;
 
 import com.maksud.spring_boot.project.city.model.Passport;
 import org.springframework.web.bind.annotation.GetMapping;

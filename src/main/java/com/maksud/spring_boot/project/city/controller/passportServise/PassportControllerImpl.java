@@ -1,9 +1,8 @@
-package com.maksud.spring_boot.project.city.controller;
+package com.maksud.spring_boot.project.city.controller.passportServise;
 
 import com.maksud.spring_boot.project.city.model.Passport;
-import com.maksud.spring_boot.project.city.service.PassportService;
+import com.maksud.spring_boot.project.city.service.passportService.PassportService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 

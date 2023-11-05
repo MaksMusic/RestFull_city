@@ -1,4 +1,4 @@
-package com.maksud.spring_boot.project.city.service;
+package com.maksud.spring_boot.project.city.service.passportService;
 
 import com.maksud.spring_boot.project.city.model.Passport;
 import com.maksud.spring_boot.project.city.repozitory.PassportRepository;
