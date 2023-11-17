@@ -5,6 +5,7 @@ import com.maksud.spring_boot.project.city.repozitory.PassportRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Random;
 
 
@@ -34,6 +35,15 @@ public class PassportServiceImpl implements PassportService{
         return (new Random().nextInt(countNum) + 100) + (new Random().nextInt(countNum) + 100);
     }
 
+    @Override
+    public Boolean deletePassport(Passport passport) {
+         passportRepository.delete(passport);
+         return true;
+    }
 
+    @Override
+    public List<Passport> getPassports() {
+        return passportRepository.findAll();
+    }
 }
 

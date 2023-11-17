@@ -1,5 +1,6 @@
 package com.maksud.spring_boot.project.city.service.citizenService;
 
+import com.maksud.spring_boot.project.city.model.Auto;
 import com.maksud.spring_boot.project.city.model.Citizen;
 import com.maksud.spring_boot.project.city.model.Passport;
 import com.maksud.spring_boot.project.city.repozitory.CitizenRepository;
@@ -57,4 +58,6 @@ public class CitizenServiceImpl implements CitizenService {
                 .orElseThrow(()->new RuntimeException("passport is not found"))
                 .getPassport();
     }
+
+
 }

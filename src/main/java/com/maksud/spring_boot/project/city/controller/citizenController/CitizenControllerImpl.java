@@ -1,5 +1,6 @@
 package com.maksud.spring_boot.project.city.controller.citizenController;
 
+import com.maksud.spring_boot.project.city.model.Auto;
 import com.maksud.spring_boot.project.city.model.Citizen;
 import com.maksud.spring_boot.project.city.model.Passport;
 import com.maksud.spring_boot.project.city.service.citizenService.CitizenService;
@@ -42,8 +43,8 @@ public class CitizenControllerImpl implements CitizenController {
     @Override
     @GetMapping("/users/{id}/passport")
     public Passport getPassport(@PathVariable Long id) {
-        return getCitizenById(id).getPassport();
-       // return  userService.getPassport(id); но нужна проверка orElse но тут ее прописать же нельзя
+        //return getCitizenById(id).getPassport();
+       return  userService.getPassport(id); //но нужна проверка orElse но тут ее прописать же нельзя
     }
 
     @Override
@@ -52,7 +53,10 @@ public class CitizenControllerImpl implements CitizenController {
         return userService.deleteCitizenById(id);
     }
 
-//    @Override
+
+
+
+    //    @Override
 //    @GetMapping("/users")
 //    public Citizen getCitizenById(@PathVariable("userId") Long userI) {
 //        return userService.getCitizenById(id);

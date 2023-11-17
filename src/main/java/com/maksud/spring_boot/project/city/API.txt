@@ -31,7 +31,16 @@ raw - Json
 
 
 -------------PASSPORT------------
-get
+GET
+http://localhost:8080/api/passposts     - список паспортов
 http://localhost:8080/api/passpost/id   - passport (по id пасспорта)
 
+DELETE
+http://localhost:8080/api/delete/passport
+raw - Json
+{
+       "id": 10,
+        "serial": 10512,
+        "number": 254
 
+}

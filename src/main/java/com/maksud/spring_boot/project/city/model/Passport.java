@@ -15,9 +15,9 @@ public class Passport {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
-
     Integer serial;
     Integer number;
+
 
 
 

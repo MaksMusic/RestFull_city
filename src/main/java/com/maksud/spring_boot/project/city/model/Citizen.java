@@ -2,9 +2,9 @@ package com.maksud.spring_boot.project.city.model;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.List;
+
 @Entity
-@Getter
-@Setter
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -17,12 +17,20 @@ public class Citizen {
     private Long id;
 
 
-   @Column(name = "name")
+   @Column(name = "name",nullable = false)
     private String name;
 
-   @OneToOne (cascade = CascadeType.ALL)
-   @JoinColumn(name = "passport_id",referencedColumnName = "id")
+   @OneToOne (cascade = CascadeType.ALL,orphanRemoval = true)
+   @JoinColumn(name = "passport_id",referencedColumnName = "id",nullable = true)
    private Passport passport;
+
+
+
+   //orphanRemoval = true - при удалении юзера удаляются все его авто
+   @OneToMany(mappedBy = "citysen", cascade = CascadeType.ALL,orphanRemoval = true)
+   private List<Auto> autos;
+
+
 
 
 }
