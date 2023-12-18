@@ -2,6 +2,7 @@ package com.maksud.spring_boot.project.city.service.citizen;
 
 import com.maksud.spring_boot.project.city.Dto.CitizenResponse;
 import com.maksud.spring_boot.project.city.model.Citizen;
+import com.maksud.spring_boot.project.city.model.Home;
 import com.maksud.spring_boot.project.city.model.Passport;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -45,5 +46,10 @@ public class MokCitizenServiceImpl implements CitizenService{
     @Override
     public List<Citizen> getCitizensByStreet(String street) {
         return null;
+    }
+
+    @Override
+    public void putHomesById(Home home) {
+
     }
 }
