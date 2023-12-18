@@ -1,13 +1,11 @@
-package com.maksud.spring_boot.project.city.controller.AutoController;
+package com.maksud.spring_boot.project.city.controller.Auto;
 
 
 import com.maksud.spring_boot.project.city.Dto.AutoResponse;
 import com.maksud.spring_boot.project.city.model.Auto;
-import com.maksud.spring_boot.project.city.service.autoService.AutoService;
+import com.maksud.spring_boot.project.city.service.auto.AutoService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 @RestController
 @RequiredArgsConstructor

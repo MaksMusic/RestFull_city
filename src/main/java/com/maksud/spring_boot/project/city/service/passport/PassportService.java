@@ -1,7 +1,6 @@
-package com.maksud.spring_boot.project.city.service.passportService;
+package com.maksud.spring_boot.project.city.service.passport;
 
 import com.maksud.spring_boot.project.city.model.Passport;
-import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
 

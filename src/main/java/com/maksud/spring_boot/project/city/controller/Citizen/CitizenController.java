@@ -1,8 +1,9 @@
-package com.maksud.spring_boot.project.city.controller.citizenController;
+package com.maksud.spring_boot.project.city.controller.Citizen;
 
-import com.maksud.spring_boot.project.city.model.Auto;
+import com.maksud.spring_boot.project.city.Dto.CitizenResponse;
 import com.maksud.spring_boot.project.city.model.Citizen;
 import com.maksud.spring_boot.project.city.model.Passport;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.List;
@@ -10,7 +11,7 @@ import java.util.List;
 @RequestMapping("/api")
 public interface CitizenController {
 
-    List<Citizen> getAllUser();
+    List<CitizenResponse> getAllUser();
 
     Citizen createUser(Citizen citizen);
     boolean deleteCitizen(Citizen citizen);
@@ -20,6 +21,7 @@ public interface CitizenController {
     Citizen getCitizenById(Long id);
 
     Passport getPassport(Long id);
+    List<CitizenResponse> getUsersByStreet(@PathVariable String street) ;
 
 
 }

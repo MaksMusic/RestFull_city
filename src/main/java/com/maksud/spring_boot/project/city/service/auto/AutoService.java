@@ -1,10 +1,7 @@
-package com.maksud.spring_boot.project.city.service.autoService;
+package com.maksud.spring_boot.project.city.service.auto;
 
 import com.maksud.spring_boot.project.city.Dto.AutoResponse;
 import com.maksud.spring_boot.project.city.model.Auto;
-import org.springframework.stereotype.Service;
-
-import java.util.List;
 
 
 public interface AutoService {

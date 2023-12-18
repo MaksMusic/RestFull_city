@@ -31,6 +31,12 @@ public class Citizen {
    private List<Auto> autos;
 
 
-
+    @ManyToMany
+    @JoinTable(
+            name = "citizen_home",
+            joinColumns = @JoinColumn(name = "citizen_id"),
+            inverseJoinColumns = @JoinColumn(name = "home_id")
+    )
+    private List<Home> homes;
 
 }

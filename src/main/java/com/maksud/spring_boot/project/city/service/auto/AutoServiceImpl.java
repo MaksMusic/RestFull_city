@@ -1,11 +1,10 @@
-package com.maksud.spring_boot.project.city.service.autoService;
+package com.maksud.spring_boot.project.city.service.auto;
 
 import com.maksud.spring_boot.project.city.Dto.AutoDto;
 import com.maksud.spring_boot.project.city.Dto.AutoResponse;
 import com.maksud.spring_boot.project.city.model.Auto;
 import com.maksud.spring_boot.project.city.repozitory.AutoRepository;
 import lombok.RequiredArgsConstructor;
-import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -43,6 +42,9 @@ public class AutoServiceImpl implements AutoService{
 
         return new AutoResponse(list,idUser);
     }
+
+
+
 
 //    @Override
 //    public AutoResponse getAutoAll(Long userId) {

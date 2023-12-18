@@ -4,6 +4,8 @@ import jakarta.persistence.*;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
+import java.util.List;
+
 
 @Entity
 @Data
@@ -15,10 +17,10 @@ public class Home {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
-    @ManyToMany
-    Citizen[] citysens;
+    @ManyToMany(mappedBy = "homes")
+    private List<Citizen> cityzens;
 
-    String name;
+    String street;
 
 
 }

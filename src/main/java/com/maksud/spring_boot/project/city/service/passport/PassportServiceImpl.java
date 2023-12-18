@@ -1,8 +1,11 @@
-package com.maksud.spring_boot.project.city.service.passportService;
+package com.maksud.spring_boot.project.city.service.passport;
 
 import com.maksud.spring_boot.project.city.model.Passport;
 import com.maksud.spring_boot.project.city.repozitory.PassportRepository;
+import com.maksud.spring_boot.project.city.service.citizen.CitizenService;
+import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -10,9 +13,11 @@ import java.util.Random;
 
 
 @Service
-@RequiredArgsConstructor
+@AllArgsConstructor
 public class PassportServiceImpl implements PassportService{
-    private final PassportRepository passportRepository;
+    private  PassportRepository passportRepository;
+
+    //private  CitizenService citizenService;
 
     @Override
     public Passport getPassport(Long id) {
